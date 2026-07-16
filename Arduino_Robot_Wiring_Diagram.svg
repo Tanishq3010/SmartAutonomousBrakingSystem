@@ -1,0 +1,224 @@
+<svg width="1600" height="1131" viewBox="0 0 1600 1131" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+<defs>
+  <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4"><circle cx="4" cy="4" r="3" fill="#222"/></marker>
+</defs>
+
+<!-- BACKGROUND -->
+<rect x="0" y="0" width="1600" height="1131" fill="#ffffff"/>
+
+<!-- TITLE -->
+<text x="800" y="45" text-anchor="middle" font-size="30" font-weight="bold" fill="#111">Arduino Obstacle-Avoiding Robot Car - Complete Wiring Diagram</text>
+<text x="800" y="72" text-anchor="middle" font-size="15" fill="#555">L293D Motor Shield + HC-SR04 + SG90 Servo + 4x TT Gear Motors + 7.4V Dual 18650 Pack</text>
+
+<!-- ================= LEGEND ================= -->
+<g>
+  <rect x="1250" y="95" width="320" height="150" rx="8" fill="#fafafa" stroke="#999" stroke-width="1.5"/>
+  <text x="1265" y="120" font-size="16" font-weight="bold" fill="#111">Wire Color Legend</text>
+  <line x1="1265" y1="135" x2="1305" y2="135" stroke="#d40000" stroke-width="5"/>
+  <text x="1315" y="140" font-size="14" fill="#222">+V Power (Red)</text>
+  <line x1="1265" y1="155" x2="1305" y2="155" stroke="#111111" stroke-width="5"/>
+  <text x="1315" y="160" font-size="14" fill="#222">GND (Black)</text>
+  <line x1="1265" y1="175" x2="1305" y2="175" stroke="#1565c0" stroke-width="4"/>
+  <text x="1315" y="180" font-size="14" fill="#222">Signal - TRIG (Blue)</text>
+  <line x1="1265" y1="195" x2="1305" y2="195" stroke="#7b1fa2" stroke-width="4"/>
+  <text x="1315" y="200" font-size="14" fill="#222">Signal - ECHO (Purple)</text>
+  <line x1="1265" y1="215" x2="1305" y2="215" stroke="#f9a825" stroke-width="4"/>
+  <text x="1315" y="220" font-size="14" fill="#222">Servo Signal (Yellow)</text>
+</g>
+
+<!-- ================= BATTERY HOLDER (bottom left) ================= -->
+<g>
+  <rect x="60" y="880" width="230" height="110" rx="10" fill="#2e7d32" stroke="#1b5e20" stroke-width="2"/>
+  <rect x="75" y="895" width="95" height="80" rx="6" fill="#455a64" stroke="#263238" stroke-width="1.5"/>
+  <rect x="180" y="895" width="95" height="80" rx="6" fill="#455a64" stroke="#263238" stroke-width="1.5"/>
+  <circle cx="122" cy="935" r="8" fill="#b71c1c"/>
+  <circle cx="227" cy="935" r="8" fill="#b71c1c"/>
+  <text x="175" y="920" text-anchor="middle" font-size="11" fill="#e0e0e0">18650</text>
+  <text x="175" y="960" text-anchor="middle" font-size="11" fill="#e0e0e0">18650</text>
+  <text x="175" y="1005" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">Dual 18650 Battery Holder</text>
+  <text x="175" y="1024" text-anchor="middle" font-size="13" fill="#333">(2 x 3.7V in series = 7.4V)</text>
+  <text x="70" y="887" font-size="11" fill="#e8f5e9">+</text>
+  <text x="283" y="887" font-size="11" fill="#e8f5e9" text-anchor="end">-</text>
+</g>
+
+<!-- ================= TOGGLE SWITCH ================= -->
+<g>
+  <rect x="360" y="895" width="110" height="70" rx="8" fill="#eeeeee" stroke="#616161" stroke-width="2"/>
+  <circle cx="415" cy="920" r="14" fill="#9e9e9e" stroke="#424242" stroke-width="2"/>
+  <rect x="408" y="895" width="14" height="20" fill="#616161"/>
+  <text x="415" y="950" text-anchor="middle" font-size="14" font-weight="bold" fill="#111">ON/OFF</text>
+  <text x="415" y="967" text-anchor="middle" font-size="14" font-weight="bold" fill="#111">Switch</text>
+</g>
+
+<!-- ================= MOTOR DRIVER SHIELD + ARDUINO (stacked, center) ================= -->
+<!-- Arduino Uno (peeking out beneath shield) -->
+<g>
+  <rect x="640" y="560" width="420" height="330" rx="14" fill="#00838f" stroke="#004d51" stroke-width="3"/>
+  <rect x="655" y="855" width="60" height="26" fill="#c0c0c0" stroke="#666" stroke-width="1"/>
+  <rect x="985" y="855" width="60" height="26" fill="#1a1a1a" stroke="#666" stroke-width="1"/>
+  <text x="850" y="900" text-anchor="middle" font-size="16" font-weight="bold" fill="#111">Arduino UNO R3</text>
+  <text x="850" y="918" text-anchor="middle" font-size="12" fill="#333">(mounted underneath the shield)</text>
+</g>
+
+<!-- L293D Motor Driver Shield stacked on top -->
+<g>
+  <rect x="655" y="540" width="390" height="290" rx="12" fill="#1b3a6b" stroke="#0b1f3d" stroke-width="3"/>
+  <rect x="675" y="558" width="350" height="40" rx="6" fill="#0f2749"/>
+  <text x="850" y="583" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">L293D Motor Driver Shield</text>
+
+  <!-- Motor terminal blocks M1-M4 -->
+  <rect x="675" y="612" width="80" height="34" rx="4" fill="#212121" stroke="#000" stroke-width="1"/>
+  <text x="715" y="634" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">M1</text>
+  <rect x="765" y="612" width="80" height="34" rx="4" fill="#212121" stroke="#000" stroke-width="1"/>
+  <text x="805" y="634" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">M2</text>
+  <rect x="855" y="612" width="80" height="34" rx="4" fill="#212121" stroke="#000" stroke-width="1"/>
+  <text x="895" y="634" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">M3</text>
+  <rect x="945" y="612" width="80" height="34" rx="4" fill="#212121" stroke="#000" stroke-width="1"/>
+  <text x="985" y="634" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">M4</text>
+
+  <!-- Servo header on shield -->
+  <rect x="800" y="662" width="100" height="30" rx="4" fill="#3e2723" stroke="#000" stroke-width="1"/>
+  <text x="850" y="682" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">SERVO</text>
+
+  <!-- External power terminal block -->
+  <rect x="675" y="720" width="110" height="34" rx="4" fill="#4e342e" stroke="#000" stroke-width="1"/>
+  <text x="730" y="742" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">EXT PWR +/-</text>
+
+  <!-- Analog pin header (for HC-SR04 A0/A1) -->
+  <rect x="920" y="720" width="105" height="34" rx="4" fill="#263238" stroke="#000" stroke-width="1"/>
+  <text x="972" y="742" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">A0  A1  5V  GND</text>
+
+  <text x="850" y="800" text-anchor="middle" font-size="13" fill="#e3f2fd">Stacked directly on top of the Arduino Uno</text>
+</g>
+
+<!-- ================= SERVO MOTOR (top center) ================= -->
+<g>
+  <rect x="780" y="235" width="140" height="90" rx="8" fill="#455a64" stroke="#212121" stroke-width="2"/>
+  <rect x="815" y="205" width="70" height="35" rx="4" fill="#607d8b" stroke="#212121" stroke-width="1.5"/>
+  <rect x="760" y="290" width="180" height="18" rx="3" fill="#607d8b" stroke="#212121" stroke-width="1"/>
+  <text x="850" y="350" text-anchor="middle" font-size="16" font-weight="bold" fill="#111">SG90 Servo Motor</text>
+  <text x="850" y="368" text-anchor="middle" font-size="12" fill="#333">(pans the ultrasonic sensor)</text>
+</g>
+
+<!-- ================= HC-SR04 ULTRASONIC SENSOR (below servo) ================= -->
+<g>
+  <rect x="770" y="420" width="160" height="80" rx="6" fill="#2e7d32" stroke="#1b5e20" stroke-width="2"/>
+  <circle cx="815" cy="460" r="28" fill="#c0c0c0" stroke="#616161" stroke-width="2"/>
+  <circle cx="885" cy="460" r="28" fill="#c0c0c0" stroke="#616161" stroke-width="2"/>
+  <circle cx="815" cy="460" r="20" fill="#9e9e9e"/>
+  <circle cx="885" cy="460" r="20" fill="#9e9e9e"/>
+  <text x="850" y="522" text-anchor="middle" font-size="16" font-weight="bold" fill="#111">HC-SR04 Ultrasonic Sensor</text>
+  <text x="815" y="475" text-anchor="middle" font-size="10" fill="#e8f5e9">TX</text>
+  <text x="885" y="475" text-anchor="middle" font-size="10" fill="#e8f5e9">RX</text>
+</g>
+
+<!-- ================= LEFT SIDE MOTORS (Front Left / Rear Left) ================= -->
+<!-- Motor 1: Front Left -->
+<g>
+  <rect x="140" y="480" width="130" height="70" rx="6" fill="#f9a825" stroke="#e65100" stroke-width="2"/>
+  <rect x="80" y="495" width="60" height="40" rx="4" fill="#757575" stroke="#212121" stroke-width="1.5"/>
+  <circle cx="60" cy="515" r="45" fill="none" stroke="#333" stroke-width="8"/>
+  <circle cx="60" cy="515" r="45" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="205" y="470" text-anchor="middle" font-size="14" font-weight="bold" fill="#111">Motor 1</text>
+  <text x="205" y="568" text-anchor="middle" font-size="12" fill="#333">Front Left - M1</text>
+</g>
+
+<!-- Motor 2: Rear Left -->
+<g>
+  <rect x="140" y="620" width="130" height="70" rx="6" fill="#f9a825" stroke="#e65100" stroke-width="2"/>
+  <rect x="80" y="635" width="60" height="40" rx="4" fill="#757575" stroke="#212121" stroke-width="1.5"/>
+  <circle cx="60" cy="655" r="45" fill="none" stroke="#333" stroke-width="8"/>
+  <circle cx="60" cy="655" r="45" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="205" y="610" text-anchor="middle" font-size="14" font-weight="bold" fill="#111">Motor 2</text>
+  <text x="205" y="708" text-anchor="middle" font-size="12" fill="#333">Rear Left - M2</text>
+</g>
+
+<!-- ================= RIGHT SIDE MOTORS (Front Right / Rear Right) ================= -->
+<!-- Motor 4: Front Right -->
+<g>
+  <rect x="1330" y="480" width="130" height="70" rx="6" fill="#f9a825" stroke="#e65100" stroke-width="2"/>
+  <rect x="1460" y="495" width="60" height="40" rx="4" fill="#757575" stroke="#212121" stroke-width="1.5"/>
+  <circle cx="1540" cy="515" r="45" fill="none" stroke="#333" stroke-width="8"/>
+  <circle cx="1540" cy="515" r="45" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="1395" y="470" text-anchor="middle" font-size="14" font-weight="bold" fill="#111">Motor 4</text>
+  <text x="1395" y="568" text-anchor="middle" font-size="12" fill="#333">Front Right - M4</text>
+</g>
+
+<!-- Motor 3: Rear Right -->
+<g>
+  <rect x="1330" y="620" width="130" height="70" rx="6" fill="#f9a825" stroke="#e65100" stroke-width="2"/>
+  <rect x="1460" y="635" width="60" height="40" rx="4" fill="#757575" stroke="#212121" stroke-width="1.5"/>
+  <circle cx="1540" cy="655" r="45" fill="none" stroke="#333" stroke-width="8"/>
+  <circle cx="1540" cy="655" r="45" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="1395" y="610" text-anchor="middle" font-size="14" font-weight="bold" fill="#111">Motor 3</text>
+  <text x="1395" y="708" text-anchor="middle" font-size="12" fill="#333">Rear Right - M3</text>
+</g>
+
+<!-- ================= WIRES ================= -->
+<!-- Motor 1 -> M1 (two wires, red/black for motor leads) -->
+<polyline points="270,500 380,500 380,612" fill="none" stroke="#d40000" stroke-width="3.5"/>
+<polyline points="270,520 400,520 400,646" fill="none" stroke="#111111" stroke-width="3.5"/>
+<polyline points="400,646 675,646" fill="none" stroke="#111111" stroke-width="3.5" stroke-dasharray="0" />
+<polyline points="380,612 715,612" fill="none" stroke="#d40000" stroke-width="3.5"/>
+
+<!-- Motor 2 -> M2 -->
+<polyline points="270,640 420,640 420,612" fill="none" stroke="#d40000" stroke-width="3.5"/>
+<polyline points="420,612 765,612" fill="none" stroke="#d40000" stroke-width="3.5"/>
+<polyline points="270,660 440,660 440,646" fill="none" stroke="#111111" stroke-width="3.5"/>
+<polyline points="440,646 805,646" fill="none" stroke="#111111" stroke-width="3.5"/>
+
+<!-- Motor 4 -> M4 -->
+<polyline points="1330,500 1150,500 1150,612" fill="none" stroke="#d40000" stroke-width="3.5"/>
+<polyline points="1025,612 1150,612" fill="none" stroke="#d40000" stroke-width="3.5"/>
+<polyline points="1330,520 1170,520 1170,646" fill="none" stroke="#111111" stroke-width="3.5"/>
+<polyline points="985,646 1170,646" fill="none" stroke="#111111" stroke-width="3.5"/>
+
+<!-- Motor 3 -> M3 -->
+<polyline points="1330,640 1130,640 1130,612" fill="none" stroke="#d40000" stroke-width="3.5"/>
+<polyline points="935,612 1130,612" fill="none" stroke="#d40000" stroke-width="3.5"/>
+<polyline points="1330,660 1110,660 1110,646" fill="none" stroke="#111111" stroke-width="3.5"/>
+<polyline points="895,646 1110,646" fill="none" stroke="#111111" stroke-width="3.5"/>
+
+<!-- Servo -> Shield servo header (signal yellow, +V red, GND black) -->
+<polyline points="850,325 850,662" fill="none" stroke="#f9a825" stroke-width="3.5"/>
+<polyline points="835,325 835,650 800,650" fill="none" stroke="#d40000" stroke-width="3"/>
+<polyline points="865,325 865,655 900,655" fill="none" stroke="#111111" stroke-width="3"/>
+
+<!-- HC-SR04 -> Shield A0 (TRIG-blue) / A1 (ECHO-purple) / 5V (red) / GND (black) -->
+<polyline points="815,500 815,545 972,545 972,720" fill="none" stroke="#1565c0" stroke-width="3.5"/>
+<polyline points="850,500 850,560 990,560 990,720" fill="none" stroke="#7b1fa2" stroke-width="3.5"/>
+<polyline points="885,500 885,575 1005,575 1005,720" fill="none" stroke="#d40000" stroke-width="3"/>
+<polyline points="905,500 905,590 1020,590 1020,720" fill="none" stroke="#111111" stroke-width="3"/>
+
+<!-- Battery -> Switch -> Shield EXT PWR (thick red/black) -->
+<polyline points="290,900 330,900 330,910 360,910" fill="none" stroke="#d40000" stroke-width="6"/>
+<polyline points="470,910 560,910 560,730 675,730" fill="none" stroke="#d40000" stroke-width="6"/>
+<polyline points="290,950 560,950 560,745 675,745" fill="none" stroke="#111111" stroke-width="6"/>
+
+<!-- ================= PIN LABELS ================= -->
+<text x="380" y="608" text-anchor="middle" font-size="10" fill="#d40000">M1 +</text>
+<text x="400" y="700" text-anchor="middle" font-size="10" fill="#111">M1 GND</text>
+<text x="420" y="608" text-anchor="middle" font-size="10" fill="#d40000">M2 +</text>
+<text x="440" y="700" text-anchor="middle" font-size="10" fill="#111">M2 GND</text>
+<text x="1150" y="608" text-anchor="middle" font-size="10" fill="#d40000">M4 +</text>
+<text x="1170" y="700" text-anchor="middle" font-size="10" fill="#111">M4 GND</text>
+<text x="1130" y="608" text-anchor="middle" font-size="10" fill="#d40000">M3 +</text>
+<text x="1110" y="700" text-anchor="middle" font-size="10" fill="#111">M3 GND</text>
+
+<text x="815" y="540" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">TRIG</text>
+<text x="850" y="555" text-anchor="middle" font-size="11" fill="#7b1fa2" font-weight="bold">ECHO</text>
+<text x="1000" y="705" text-anchor="middle" font-size="10" fill="#333">A0</text>
+<text x="1020" y="705" text-anchor="middle" font-size="10" fill="#333">A1</text>
+
+<text x="335" y="890" text-anchor="middle" font-size="11" fill="#d40000" font-weight="bold">Battery +</text>
+<text x="500" y="900" text-anchor="middle" font-size="11" fill="#d40000" font-weight="bold">Switch -&gt; Shield EXT +</text>
+<text x="500" y="965" text-anchor="middle" font-size="11" fill="#111" font-weight="bold">Battery - -&gt; Shield GND</text>
+
+<!-- ================= NOTES BOX ================= -->
+<g>
+  <rect x="60" y="1045" width="1480" height="60" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="80" y="1068" font-size="13" fill="#333">Note: Arduino Uno R3 receives logic power through the L293D Motor Shield header pins. The shield's motor/servo power comes directly from the external 7.4V battery pack via the ON/OFF switch (positive line only).</text>
+  <text x="80" y="1088" font-size="13" fill="#333">HC-05 Bluetooth module intentionally NOT included in this diagram, per project spec.</text>
+</g>
+
+</svg>
